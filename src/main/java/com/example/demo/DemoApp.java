@@ -7,17 +7,10 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 
 @SpringBootApplication
 @ConfigurationPropertiesScan
-public class DemoApp implements CommandLineRunner {
-
-    @Autowired
-    private ApplicationPropertiesRecord applicationPropertiesRecord;
+public class DemoApp {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApp.class, args);
 
-    }
-    @Override
-    public void run(String... args) {
-        System.out.println(applicationPropertiesRecord.toString());
     }
 }

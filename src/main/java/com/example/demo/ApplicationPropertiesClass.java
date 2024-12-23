@@ -1,11 +1,6 @@
 package com.example.demo;
 
-import jakarta.validation.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.validation.annotation.Validated;
-
-import java.util.Objects;
 
 @ConfigurationProperties(prefix = "app-class")
 public final class ApplicationPropertiesClass {
@@ -16,8 +11,7 @@ public final class ApplicationPropertiesClass {
     private final String foo;
 
 
-    public ApplicationPropertiesClass(
-            @NotBlank String foo) {
+    public ApplicationPropertiesClass(String foo) {
         this.foo = foo;
     }
 
